@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+  <title>Page Title</title> 
+  <link rel="stylesheet" href="libs/jquery-mobile/jquery.mobile-1.0a4.1.css" />
+  <link rel="stylesheet" href="app/base/css/base.css" />
+  <script src="libs/jquery/jquery-1.5.0.min.js"></script>
+  <script src="libs/knockout/knockout-1.2.0.js"></script>
+  <script src="libs/knockout/knockout-bindings-jqm.js" type="text/javascript"></script>
+  <script src="libs/rx/rx.js" type="text/javascript"></script>
+  <script src="app/App.js"></script>
+  <script src="app/App.ViewModels.HomeScreenViewModel.js"></script>
+  <script src="app/App.MockedStatisticsService.js"></script>
+  <script src="libs/jquery-mobile/jquery.mobile-1.0a4.1.js"></script>  
+</head> 
+<body> 
+
+<!-- Start of first page -->
+<div data-role="page" id="home">
+
+    <div data-role="header">
+        <h1>Demo App</h1>
+    </div><!-- /header -->
+
+    <div data-role="content">   
+
+    <div class="ui-grid-a">
+        <div class="ui-block-a">
+            <div class="ui-bar" style="height:120px">
+                <h1>Tours today (please wait 10 seconds to see the effect)</h1>
+                <p><span data-bind="text: toursTotal"></span> total</p>
+                <p><span data-bind="text: toursRunning"></span> running</p>
+                <p><span data-bind="text: toursCompleted"></span> completed</p>     
+            </div>
+        </div>
+    </div>
+
+    <fieldset class="ui-grid-a">
+        <div class="ui-block-a"><button data-bind="click: showTourList, jqmButtonEnabled: toursAvailable" data-theme="a">Tour List</button></div>  
+    </fieldset>
+
+    </div><!-- /content -->
+
+    <div data-role="footer" data-position="fixed">
+        <h4>by Christoph Burgdorf</h4>
+    </div><!-- /header -->
+</div><!-- /page -->
+
+<!-- tourlist page -->
+<div data-role="page" id="tourlist">
+
+    <div data-role="header">
+        <h1>Bar</h1>
+    </div><!-- /header -->
+
+    <div data-role="content">   
+        <p><a href="#home">Back to home</a></p> 
+    </div><!-- /content -->
+
+    <div data-role="footer" data-position="fixed">
+        <h4>by Christoph Burgdorf</h4>
+    </div><!-- /header -->
+</div><!-- /page -->
+
+</body>
+</html>

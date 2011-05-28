@@ -1,0 +1,33 @@
+.image {
+	float: left;
+    width: 32px;
+	height: 32px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.image.check { background-image: url(../images/check.png); }
+.image.cross { background-image: url(../images/cross.png); }
+
+.line-a{
+	position:relative;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.line-b{
+	position:relative;
+	padding-left: 20px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.absolute-right {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.significant{
+	font-weight: bold;
+}
